@@ -40,6 +40,19 @@ web: vendor/bin/heroku-php-apache2 public/
 $ git push heroku master
 ```
 
+### Adicionando um banco de dados na aplicação do Heroku
+
+```
+$ heroku addons:create heroku-postgresql:hobby-dev
+```
+
+### Rodar comandos laravel no Heroku
+
+```
+$ heroku run php artisan migrate
+$ heroku run php artisan db:seed
+```
+
 OBS.: Caso tenha clonado um projeto laravel para trabalhar e este projeto esteja no Heroku, não esqueça de adicionar o repositório remoto do Heroku em sua aplicação laravel.
 
 Para isso utilize o comando abaixo.
